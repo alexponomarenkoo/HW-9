@@ -1,59 +1,53 @@
- ####task 1
- # Користувач вводить із клавіатури номер дня тижня (1-7).
- # Необхідно вивести на екран назви дня тижня.
- # Наприклад, якщо 1, на екрані напис понеділок, 2 — вівторок тощо.\
-
-
-# a = int(input("Enter day number: "))
-# if a == 1:
-#    print("Monday")
-# elif a == 2:
-#    print("Tuesday")
-# elif a == 3:
-#    print("Wednesday")
-# elif a == 4:
-#    print("Thursday")
-# elif a == 5:
-#    print("Friday")
-# elif a == 6:
-#    print("Saturday")
-# elif a == 7:
-#    print("Sunday")
-
-####task 2
-# Користувач вводить два числа.
-#  Визначити, чи рівні ці числа, і, якщо ні, вивести їх на екран у порядку зростання
-
-
-# a = int(input("First number: "))
-# b = int(input("Second number: "))
-# if a != b and a < b:
-#    print(str(a) + " " + str(b))
-# elif a != b and a > b:
-#    print(str(b) + " " + str(a))
-# else:
-#    print("a = b")
-####task 3
-# Користувач вводить два числа та матем дію: + - * або /
-# Залежно від введеної матем дії вивести результат
-
-
-# while True:
-#     s = input("Select action (+, -, *, /): ")
+# Створити ієрархію класів для опису академії.
+# Зразковий список класів: Person, Teacher, Student, Subject, Academy і т.д.
 #
-#     if s in ('+', '-', '*', '/'):
-#         a = float(input("a = "))
-#         b = float(input("b = "))
-#         if s == '+':
-#             print("%.2f" % (a + b))
-#         elif s == '-':
-#             print("%.2f" % (a - b))
-#         elif s == '*':
-#             print("%.2f" % (a * b))
-#         elif s == '/':
-#             if b != 0:
-#                 print("%.2f" % (a / b))
-#             else:
-#                 print("Impossible to divide by 0!")
-#     else:
-#         print("Invalid operation!")
+# class Person:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def display_info(self):
+#         print(f'Name: {self.name}')
+#
+#
+# class Teacher(Person):
+#     def __init__(self, name, subject):
+#         super().__init__(name)
+#         self.subject = subject
+#
+#     def display_info(self):
+#         super().display_info()
+#         print(f'Teacher of {self.subject}')
+#
+#
+# class Student(Person):
+#     def __init__(self, name, grade):
+#         super().__init__(name)
+#         self.grade = grade
+#
+#     def display_info(self):
+#         super().display_info()
+#         print(f'Grade: {self.grade}')
+#
+#
+# class Subject:
+#     def __init__(self, name):
+#         self.name = name
+#
+#
+# class Academy:
+#     def __init__(self, name):
+#         self.name = name
+#         self.teachers = []
+#         self.students = []
+#         self.subjects = []
+#
+#     def add_teacher(self, teacher):
+#         self.teachers.append(teacher)
+#
+#     def add_student(self, student):
+#         self.students.append(student)
+#
+#     def add_subject(self, subject):
+#         self.subjects.append(subject)
+#
+#
